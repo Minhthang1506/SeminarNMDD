@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingVertical="8dp"
+    tools:context=".MainActivity">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:paddingVertical="8dp"
+       android:layout_marginTop="8dp">
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/typename_tf"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp"
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+           android:hint="Name">
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/nameInputEditText"
+               android:textSize="12dp"/>
+       </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/typeMSSV_tf"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="6sp"
+            android:hint="MSSV">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/MSSVInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:layout_marginTop="6dp">
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/add_btn"
+            android:background="@drawable/ic_baseline_add_circle_24"
+            android:paddingLeft="40dp"/>
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/reedit_btn_btn"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ic_baseline_edit_off_24"
+            />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/delete_btn"
+            android:background="@drawable/ic_baseline_delete_forever_24"
+            android:layout_marginLeft="15dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/student_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+    </ListView>
+</LinearLayout>
