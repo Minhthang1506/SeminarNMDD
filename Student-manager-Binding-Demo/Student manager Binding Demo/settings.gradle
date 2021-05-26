@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Student manager Binding Demo"
+rootProject.name = "Demo"
