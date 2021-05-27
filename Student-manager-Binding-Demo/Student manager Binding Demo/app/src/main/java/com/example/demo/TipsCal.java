@@ -21,8 +21,8 @@ public class TipsCal extends AppCompatActivity {
         ActivityTipsCalBinding binding
             = DataBindingUtil.setContentView(this, R.layout.activity_tips_cal);
 
-        CalcModel calcModel = new CalcModel();
-        binding.setCalc(calcModel);
+        MyViewModel myViewModel = new ViewModelProvider(this).get(MyViewModel.class);
+        binding.setMyViewModel(myViewModel);
 
 
         //MyViewModel myViewModel

@@ -6,9 +6,6 @@
 
     <data>
         <variable
-            name="calc"
-            type="com.example.demo.observableObject.CalcModel"/>
-        <variable
             name="myViewModel"
             type="com.example.demo.MyViewModel"/>
     </data>
@@ -37,7 +34,7 @@
             app:layout_constraintVertical_bias="0.13999999" />
 
         <EditText
-            android:text="@={calc.amount}"
+            android:text="@={myViewModel.calcModel.amount}"
             android:id="@+id/AmountEditer"
             android:layout_width="350dp"
             android:layout_height="50dp"
@@ -65,7 +62,7 @@
             app:layout_constraintVertical_bias="0.0">
 
             <SeekBar
-                android:progress="@={calc.percent}"
+                android:progress="@={myViewModel.calcModel.percent}"
                 android:id="@+id/PercentBar"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
@@ -79,7 +76,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:text="@{String.valueOf(calc.percent)}"
+                android:text="@{String.valueOf(myViewModel.calcModel.percent)}"
                 android:id="@+id/PercentView"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
@@ -133,7 +130,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:text="@{String.valueOf(calc.tips)}"
+                android:text="@{String.valueOf(myViewModel.calcModel.tips)}"
                 android:id="@+id/TipsView"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
@@ -173,7 +170,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:text="@{String.valueOf(Integer.valueOf(calc.amount) + calc.tips)}"
+                android:text="@{String.valueOf(Integer.valueOf(myViewModel.calcModel.amount) + myViewModel.calcModel.tips)}"
                 android:id="@+id/TotalView"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
